@@ -6,6 +6,17 @@ const $messageFormInput = $messageForm.querySelector('input')
 const $messageFormButton = $messageForm.querySelector('button')
 const $sendLocationButton = document.querySelector('#send-location')
 const $messages = document.querySelector('#messages')
+const chatSideBar=document.querySelector('.chat__sidebar');
+const toggleChatSideBarBtn=document.querySelector('.chat__sidebar-open');
+
+toggleChatSideBarBtn.addEventListener('click',()=>{
+    if(chatSideBar.classList.contains('chat__sidebar-active')){
+        chatSideBar.classList.remove('chat__sidebar-active');
+    }
+    else{
+        chatSideBar.classList.add('chat__sidebar-active');
+    }
+});
 
 // Templates
 const messageTemplate = document.querySelector('#message-template').innerHTML
